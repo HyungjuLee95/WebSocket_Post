@@ -75,6 +75,7 @@ messaging을 웹소켓을 이용하여 구현해보자(브라우져 통신 방�
 ![image](https://github.com/HyungjuLee95/WebSocket_Post/assets/111270174/e93e48ee-8ecf-4b4f-992c-eaeb2ca48fb5)
 정상적으로 실시간 채팅 전송이 되는 모습을 확인하였습니다.
 
+# 아래는 코드이며, 웹소켓 완성이 아닌, 추가적으로 채팅 내용의 기억과 현재 json형식으로 주고 받는 내용에 대해서 간단한 채팅창에 보일 수 있도록 수정할 것입니다.
 
 ---
 
