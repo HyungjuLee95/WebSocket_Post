@@ -7,8 +7,10 @@ import org.springframework.web.socket.WebSocketSession;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import test.com.webSocket.Service.ChatService;
 
+@Slf4j
 @Getter
 public class ChatRoom {
 
@@ -33,6 +35,7 @@ public class ChatRoom {
 	}
 
 	private <T> void sendMessage(T message, ChatService chatService) {
+		log.info("message");
 		sessions.parallelStream().forEach(session->chatService.sendMessage(session, message));
 		
 	}

@@ -7,11 +7,16 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	chatmain입니다  
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
+<table>
+<c:forEach items="${vo2}" var="vo">
+<tr>
+<td> ${vo.roomid}</td>
+</tr>
+</c:forEach>
+</table>
 </body>
-
 <a href="login.do">로그인페이지</a>
 </html>
