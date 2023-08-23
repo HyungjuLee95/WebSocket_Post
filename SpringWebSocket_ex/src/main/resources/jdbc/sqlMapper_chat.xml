@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.webSocket">
+	<select id="SELECT_ALL" resultType="test.com.webSocket.Model.ChatRoomVO">
+		select * from chatlist where groupmaster=#{id} order by num desc
+	</select>
+	
+		<insert id="ROOM_INSERT" parameterType="test.com.webSocket.Model.ChatRoomVO">
+		insert into chatlist(num,roomid,groupmaster,groupmember,groupname) 
+		values(seq_chat_number.nextval, #{roomid},#{groupmaster},#{groupmember},#{groupname})
+	</insert>
+	
+<!-- 	<select id="B_SELECT_ONE" resultType="test.com.project.board.model.BoardVO"> -->
+<!-- 		select * from board where wnum = #{wnum} -->
+<!-- 	</select> -->
+	
+	
+<!-- 	<select id="B_SEARCH_LIST_TITLE" resultType="test.com.project.board.model.BoardVO"> -->
+<!-- 		select * from board where title like #{searchWord} -->
+<!-- 	</select> -->
+	
+<!-- 	<select id="B_SEARCH_LIST_CONTENT" resultType="test.com.project.board.model.BoardVO"> -->
+<!-- 		select * from board where content like #{searchWord}  -->
+<!-- 	</select> -->
+	
+<!-- 	<select id="B_SEARCH_LIST_WRITER" resultType="test.com.project.board.model.BoardVO"> -->
+<!-- 		select * from board where writer like #{searchWord}  -->
+<!-- 	</select> -->
+	
+	
+	
+	
+<!-- 	<update id="B_UPDATE" parameterType="test.com.project.board.model.BoardVO"> -->
+<!-- 		update board set title=#{title} , content=#{content} ,  -->
+<!-- 		wdate=sysdate -->
+<!-- 		where wnum = #{wnum} -->
+<!-- 	</update> -->
+	
+<!-- 	<update id="B_VCOUNT_UP" parameterType="test.com.project.board.model.BoardVO"> -->
+<!-- 		update board set vcount=vcount+1 -->
+<!-- 		where wnum = #{wnum} -->
+<!-- 	</update> -->
+	
+<!-- 	<delete id="B_DELETE"> -->
+<!-- 		delete from board where wnum = #{wnum} -->
+<!-- 	</delete> -->
+	
+</mapper>
